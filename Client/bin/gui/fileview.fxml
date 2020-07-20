@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FileviewController">
+   <left>
+      <VBox id="left">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#handleSceneSwitch" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/offline-user-icon.png" />
+               </image>
+            </ImageView>
+            <Line endX="70.0" startX="0" stroke="#2C3E50" />
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Blank-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox id="right">
+         <children>
+            <Label id="directory-label" text="Directory" />
+            <Line endX="250.0" startX="0.0" stroke="#2C3E50" />
+            <TreeView fx:id="filesTree" onMouseClicked="#handleSelection" />
+            <Line endX="250.0" startX="0.0" stroke="#2C3E50" />
+            <Label id="info-label" fx:id="infoLabel" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox id="center">
+         <children>
+            <Label id="selected-file" fx:id="selectedFileLabel" text="No file selected"></Label>
+            <VBox id="info-box" fx:id="infoBox" />
+            <HBox id="buttons-Box">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#handleSaving" text="Save" />
+                  <Button mnemonicParsing="false" onMouseClicked="#handleDeletion" text="Delete" />
+               </children>
+            </HBox>
+            <Label id="meta-info_label" fx:id="metaInfoLabel" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MessengerController">
+   <left>
+      <VBox id="left">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/offline-user-icon.png" />
+               </image>
+            </ImageView>
+            <Line endX="70.0" startX="0.0" stroke="#2C3E50" />
+            <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#handleSceneSwitch" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Blank-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox id="right">
+         <children>
+            <Label id="online-label" text="Online" />
+            <Line endX="250.0" startX="0.0" stroke="#2C3E50" />
+            <ListView fx:id="onlineList" onMouseClicked="#handleSelection" />
+            <Line endX="250.0" startX="0.0" stroke="#2C3E50" />
+            <Label id="info-label" fx:id="infoLabel" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox id="center">
+         <children>
+            <Label id="selected-user" fx:id="usernameLabel" text="No available users" />
+            <VBox id="conversation-box" fx:id="conversationBox"> </VBox>
+            <HBox id="input-Box">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#handleSendFile" text="+" />
+                  <TextField fx:id="messageTF" />
+                  <Button mnemonicParsing="false" onMouseClicked="#handleSendMessage" text="&gt;" />
+               </children>
+            </HBox>
+             <Label id="meta-info_label" fx:id="metaInfoLabel" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

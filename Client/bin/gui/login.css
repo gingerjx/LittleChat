@@ -1,0 +1,65 @@
+.root{
+	-fx-background-color: #273746;
+	-fx-alignment: CENTER;
+	-fx-pref-height: 600px; 
+	-fx-pref-width: 600px;
+	-fx-spacing: 10px;
+	-fx-padding: 10px 10px 10px 10px;
+}
+#welcome-label{
+	-fx-alignment: CENTER;
+	-fx-pref-height: 50px; 
+	-fx-pref-width: 600px;
+	-fx-text-fill: #ffffff;
+	-fx-padding: 10px 0px 10px 0px;
+	-fx-font-size: 37px;
+}
+.darker-mode{
+	-fx-text-fill: #ffffff;
+	-fx-background-color: #1C2833;
+}
+#info-label{
+	-fx-alignment: CENTER;
+	-fx-text-alignment: CENTER;
+	-fx-pref-height: 150px; 
+	-fx-pref-width: 500px;
+	-fx-padding: 0px 40px 0px 40px;
+	-fx-font-size: 20px;
+	-fx-wrap-text: true;
+}
+.text-field-label{
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 20px;
+}
+.text-field{
+	-fx-background-color: #ABB2B9;
+}
+.button:hover{
+	-fx-opacity: .8;
+}
+#chooseDirButton{
+	-fx-font-size: 16px;
+}
+#port-text-field{
+	 -fx-pref-width: 75px;
+}
+#server-ip-tf{
+	-fx-pref-width: 200px;
+}
+#directory-tf{
+	-fx-pref-width: 350px;
+}
+.input-box{
+	-fx-alignment: CENTER;
+	-fx-pref-height: 50px; 
+	-fx-pref-width: 200px;
+	-fx-spacing: 20px;
+}
+#loginButton{
+	-fx-font-size: 24px;
+}
+#error-label{
+	-fx-text-fill: #C0392B;
+	-fx-pref-width: 500px; 
+	-fx-padding: 10px 0px 0px 0px;
+}
